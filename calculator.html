@@ -18,7 +18,14 @@
     <!-- Price Difference Calculator Div Start-->
     <div class="row g-3 mt-3 p-3" style="border: solid;">
       <h2>Price Difference Calculator</h2>
+      
       <div class="row g-3 mt-3">
+        <div class="col-md-12">
+          <label id="closingPrice" for="btnClosingPrice" style="color: rgb(24, 24, 24);">Old Text</label>
+          <button class="btn btn-primary" id="btnClosingPrice" onclick="getMetalRates()">Prev Closing Price</button>
+        </div>
+        
+
         <div class="col-md-4">
           <input type="number" id="num1" class="form-control" placeholder="Enter number 1"
             oninput="priceDifference()" />
