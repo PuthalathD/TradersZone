@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculator - Traders Zone</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <div id="header"></div>
+  <div id="navbar"></div>
+
+  <div class="container content py-4">
+
+    <!-- Price Difference Calculator Div Start-->
+    <div class="row g-3 mt-3 p-3" style="border: solid;">
+      <h2>Price Difference Calculator</h2>
+      <div class="row g-3 mt-3">
+        <div class="col-md-4">
+          <input type="number" id="num1" class="form-control" placeholder="Enter number 1"
+            oninput="priceDifference()" />
+        </div>
+        <div class="col-md-4">
+          <input type="number" id="num2" class="form-control" placeholder="Enter number 2"
+            oninput="priceDifference()" />
+        </div>
+        <div class="col-md-4">
+          <input type="number" id="result" class="form-control" placeholder="Result" readonly />
+        </div>
+      </div>
+      <div class="mt-3">
+        <button class="btn btn-primary" onclick="priceDifference()">Calculate</button>
+      </div>
+    </div>
+    <!-- Price Difference Calculator Div End-->
+
+    <!-- Profit Loss Calculator Div Start-->
+    <div class="row g-3 mt-3 p-3" style="border: solid;">
+      <h2>Profit Loss Calculator</h2>
+      <div class="row g-3 mt-3">
+        <div class="col-md-4">
+          <input type="number" id="lot" class="form-control" placeholder="Enter lot" oninput="priceDifference()" />
+        </div>
+        <div class="col-md-4">
+          <input type="number" id="point" class="form-control" placeholder="Enter point" oninput="priceDifference()" />
+        </div>
+        <div class="col-md-4">
+          <input type="number" id="profit" class="form-control" placeholder="Profit/Loss" readonly />
+        </div>
+      </div>
+      <div class="mt-3">
+        <button class="btn btn-primary" onclick="calculateProfit()">Calculate Profit</button>
+      </div>
+    </div>
+    <!-- Profit Loss Calculator Div End-->
+
+    <!-- OHLC Price Difference Calculator Div Start-->
+    <div class="row g-3 mt-3 p-3" style="border: solid;">
+      <h2>OHLC Price Difference Calculator</h2>
+      <div class="row g-3 mt-3">
+        <div class="col-md-3">
+          <input type="number" id="open_price_txt" class="form-control" placeholder="Enter Open Price" />
+        </div>
+        <div class="col-md-3">
+          <input type="number" id="high_price_txt" class="form-control" placeholder="Enter High Price" />
+        </div>
+        <div class="col-md-3">
+          <input type="number" id="low_price_txt" class="form-control" placeholder="Enter Low Price" />
+        </div>
+        <div class="col-md-3">
+          <input type="number" id="close_price_txt" class="form-control" placeholder="Enter Close Price" />
+        </div>
+      </div>
+
+      <div class="row g-3 mt-3">
+        <div class="col-md-3">
+          <input type="number" id="difference_percentage_txt" class="form-control" placeholder="Enter Difference in %" />
+        </div>
+        <div class="col-md-3">
+          <button class="btn btn-primary" onclick="ohlcPriceDifference()">Calculate</button>
+        </div>
+      </div>
+
+      <div class="row g-3 mt-3">
+        <div class="col-md-3">
+          <input type="number" id="open_price_d_txt" class="form-control" placeholder="Open Price" readonly />
+        </div>
+        <div class="col-md-3">
+          <input type="number" id="high_price_d_txt" class="form-control" placeholder="High Price" readonly />
+        </div>
+        <div class="col-md-3">
+          <input type="number" id="low_price_d_txt" class="form-control" placeholder="Low Price" readonly />
+        </div>
+        <div class="col-md-3">
+          <input type="number" id="close_price_d_txt" class="form-control" placeholder="Close Price" readonly />
+        </div>
+      </div>
+    </div>
+    <!-- OHLC Price Difference Calculator Div End-->
+  </div>
+
+  <div id="footer"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/metal_rate_api.js"></script>
+  <script>
+    function loadHTML(id, file) {
+      fetch(file)
+        .then(res => res.text())
+        .then(data => document.getElementById(id).innerHTML = data);
+    }
+    loadHTML("header", "includes/header.html");
+    loadHTML("navbar", "includes/navbar.html");
+    loadHTML("footer", "includes/footer.html");
+  </script>
+</body>
+
+</html>

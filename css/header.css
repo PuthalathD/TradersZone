@@ -1,0 +1,12 @@
+
+header {
+  background-color: #1e1e1e;
+  padding: 1rem;
+}
+.logo {
+  max-height: 50px;
+}
+.header-title {
+  color: white;
+  text-align: right;
+}

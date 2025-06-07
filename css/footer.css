@@ -1,0 +1,14 @@
+
+footer .footer-top {
+  background-color: #1e1e1e;
+}
+footer .footer-bottom {
+  background-color: black;
+  color: white;
+}
+.footer-links a {
+  display: block;
+  color: #fff;
+  margin-bottom: 5px;
+  text-decoration: none;
+}
