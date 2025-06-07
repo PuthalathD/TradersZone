@@ -48,12 +48,3 @@ function ohlcPriceDifference(){
 //3289.665
  //Live Reload is not possible without a head or body tag.
  
- open_price_txt
-high_price_txt
-low_price_txt
-close_price_txt
-difference_percentage_txt
-open_price_d_txt
-high_price_d_txt
-low_price_d_txt
-close_price_d_txt
