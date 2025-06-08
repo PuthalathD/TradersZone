@@ -8,7 +8,7 @@ body, html {
 }
 
 /* Full-width image banner */
-#productImage {
+#bannerImage {
   width: 100%;
   height: 500px;
   background-image: url('../images/banner-bg.png'); /* Adjust path if needed */
@@ -21,7 +21,7 @@ body, html {
 }
 
 /* Optional overlay for better text readability */
-#productImage::before {
+#bannerImage::before {
   content: "";
   background-color: rgba(0, 0, 0, 0.4);
   position: absolute;
@@ -32,7 +32,7 @@ body, html {
   z-index: 1;
 }
 
-#productImage .overlay-content {
+#bannerImage .overlay-content {
   position: relative;
   z-index: 2;
 }
