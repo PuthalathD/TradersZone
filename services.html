@@ -13,12 +13,18 @@
 
   <div class="container content py-4">
     <h2>Our Services</h2><p>Details about services we offer.</p>
+    <label id="gmtClock">GMT Time: </label><br>
+    <label id="istClock">IST Time: </label>
+
+    <!-- Link to external JavaScript -->
+    
   </div>
 
   <div id="footer"></div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/script.js"></script>
+  <script src="js/clock.js"></script>
   <script>
     function loadHTML(id, file) {
       fetch(file)

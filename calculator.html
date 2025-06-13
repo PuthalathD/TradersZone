@@ -21,8 +21,9 @@
       
       <div class="row g-3 mt-3">
         <div class="col-md-12">
-          <label id="closingPrice" for="btnClosingPrice" style="color: rgb(24, 24, 24);">Old Text</label>
+          <label id="closingPrice" for="btnClosingPrice" style="color: rgb(24, 24, 24);">Prev Day Price</label>
           <button class="btn btn-primary" id="btnClosingPrice" onclick="getMetalRates()">Prev Closing Price</button>
+          <label id="closingPrice" for="btnClosingPrice" style="color: rgb(60, 27, 245); font-weight: bold; font-style: italic;">XAUUSD GOLD OANDA</label>
         </div>
         
 
@@ -107,6 +108,58 @@
       </div>
     </div>
     <!-- OHLC Price Difference Calculator Div End-->
+
+        <!-- Candle Trend and Ratio Calculator Div Start-->
+    <div class="row g-3 mt-3 p-3" style="border: solid;">
+      <h2>Candle Trend and Ratio Calculator</h2>
+      <div class="row g-3 mt-3">
+        <div class="col-md-3">
+          <input type="number" id="rt_open_price_txt" class="form-control" placeholder="Enter Open Price" />
+        </div>
+        <div class="col-md-3">
+          <input type="number" id="rt_high_price_txt" class="form-control" placeholder="Enter High Price" />
+        </div>
+        <div class="col-md-3">
+          <input type="number" id="rt_low_price_txt" class="form-control" placeholder="Enter Low Price" />
+        </div>
+        <div class="col-md-3">
+          <input type="number" id="rt_close_price_txt" class="form-control" placeholder="Enter Close Price" />
+        </div>
+      </div>
+
+      <div class="row g-3 mt-3">
+        <div class="col-md-3">
+          <button id ="btnCandleDetails" class="btn btn-primary" onclick="calculateCandleDetails()">Calculate</button>
+        </div>
+      </div>
+
+      <div id="rt_result_div" class="row g-3 mt-3">
+        <div class="col-md-2">
+          <label style="color: rgb(24, 24, 24); font-weight: bold;">Body Wick Ratio : </label>
+          <label id="rt_body_wick_ratio_lbl" for="btnCandleDetails" style="color: rgb(24, 24, 24);">-</label>
+        </div>
+        <div class="col-md-2">
+          <label style="color: rgb(24, 24, 24); font-weight: bold;">Wick Size : </label>
+          <label id="rt_wick_size_lbl" for="btnCandleDetails" style="color: rgb(24, 24, 24);">-</label>
+        </div>
+        <div class="col-md-2">
+          <label style="color: rgb(24, 24, 24); font-weight: bold;">Body Size : </label>
+          <label id="rt_body_size_lbl" for="btnCandleDetails" style="color: rgb(24, 24, 24);">-</label>
+        </div>
+        <div class="col-md-2">
+          <label style="color: rgb(24, 24, 24); font-weight: bold;">Candle Type : </label>
+          <label id="rt_candle_type_lbl" for="btnCandleDetails" style="color: rgb(24, 24, 24);">-</label>
+        </div>
+        <div class="col-md-2">
+          <label style="color: rgb(24, 24, 24); font-weight: bold;">Candle Trend : </label>
+          <label id="rt_candle_trend_lbl" for="btnCandleDetails" style="color: rgb(24, 24, 24);">-</label>
+        </div>
+        <div class="col-md-2">
+          <input type="number" id="rt_candle_colour_txt" class="form-control" readonly />
+        </div>
+      </div>
+    </div>
+    <!-- Candle Trend an Ratio Calculator Div End-->
   </div>
 
   <div id="footer"></div>
@@ -114,6 +167,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/script.js"></script>
   <script src="js/metal_rate_api.js"></script>
+  <script src="js/clock.js"></script>
   <script>
     function loadHTML(id, file) {
       fetch(file)

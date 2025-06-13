@@ -7,6 +7,9 @@ body, html {
   background-color: white;
 }
 
+/*--------------------------------------------------------------
+# Banner Section
+--------------------------------------------------------------*/
 /* Full-width image banner */
 #bannerImage {
   width: 100%;
@@ -56,3 +59,5 @@ body, html {
   background-color: blue;
   border-color: blue;
 }
+
+/*----------------------------------------------------------*/
