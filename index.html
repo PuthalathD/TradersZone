@@ -14,7 +14,51 @@
   <div id="header"></div>
 
   <div id="navbar"></div>
+
+  <!-- ############################################################################## -->
+   <div id="dnn1" class="d-flex">
+      <!-- TradingView Ticker Tape -->
+  <div class="tradingview-widget-container">
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+    {
+      "symbols": [
+    {
+      "proName": "FX_IDC:EURUSD",
+      "title": "EUR to USD"
+    },
+    {
+      "proName": "BITSTAMP:BTCUSD",
+      "title": "Bitcoin"
+    },
+    {
+      "proName": "BITSTAMP:ETHUSD",
+      "title": "Ethereum"
+    },
+    {
+      "proName": "OANDA:XAUUSD",
+      "title": "Gold to USD"
+    },
+    {
+      "proName": "CAPITALCOM:US30",
+      "title": "US 30"
+    }
+  ],
+       "colorTheme": "dark",
+      "isTransparent": false,
+      "showSymbolLogo": true,
+      "displayMode": "adaptive",
+      "locale": "en"
+    }
+    </script>
+  </div>
+   </div>
+  <!-- ############################################################################## -->
        
+<!-- TradingView Widget BEGIN -->
+
+<!-- TradingView Widget END -->
+
+
   <!-- Full-width banner Image Section -->
   <div id="bannerImage" class="d-flex align-items-center justify-content-center text-center">
     <div class="overlay-content">
@@ -39,7 +83,7 @@
         { "proName": "FX_IDC:USDINR", "title": "USD/INR" },
         { "proName": "OANDA:XAUUSD", "title": "Gold" }
       ],
-      "colorTheme": "light",
+       "colorTheme": "dark",
       "isTransparent": false,
       "displayMode": "adaptive",
       "locale": "en"
@@ -93,6 +137,24 @@
     </script>
   </div>
 </div>
+
+<!--###################################################################################-->
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <div class="tradingview-widget-copyright"><a href="https://in.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+  {
+  "symbol": "OANDA:XAUUSD",
+  "colorTheme": "dark",
+  "isTransparent": false,
+  "locale": "in",
+  "width": 350
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+<!--###################################################################################-->
 
 
   <!-- Content Container -->
